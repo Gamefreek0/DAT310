@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      form{
+        width: 350px;
+        margin: auto;
+      }
+      fieldset{
+        background-color: yellow;
+      }
+      label{
+        display: inline-block;
+        width: 80px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form action="http://www3.ux.uis.no/~balog/dat310/formtest.php" method="post">
+
+
+    <fieldset>
+
+    <legend>Personal details</legend>
+    <label for="fn">First name: </label>
+    <input type="text" name="fn" id="fn">
+    <br>
+     <label for="ln">Last name: </label>
+     <input type="text" name="ln" id="ln">
+    <br>
+    <label for="">Email: </label>
+    <input type="email" name="email" id="mail">
+    <br>
+    <label for="gender">Gender: </label>
+    <input type="radio" name="gender" value="male" id="gender">
+    Male
+    <input type="radio" name="gender" value="female" id="gender">
+    Female
+</fieldset>
+<fieldset>
+    <legend>Magazines</legend>
+<input type="checkbox" name="staaf" value="staaf" id="staaf">
+Stavanger Aftenblad
+<br>
+<input type="checkbox" name="tekuk" value="tekuk" id="tekuk">
+Teknisk Ukeblad
+<br>
+<input type="checkbox" name="sehor" value="sehor" id="sehor">
+Se og Hør
+<br>
+<input type="checkbox" name="famil" value="famil" id="famil">
+Familien
+</fieldset>
+<fieldset>
+    <legend>Subscription</legend>
+<label for="period">Period: </label>
+<select name="period" id="period">
+  <option value="6">6 months</option>
+  <option value="12">12 months</option>
+  <option value="18">18 months</option>
+  <option value="24">24 months</option>
+</select>
+</fieldset>
+<input type="hidden" name="campaign_id" value="can you see me?">
+<input type="submit" name="submit" value="Subscribe">
+
+    </form>
+  </body>
+</html>
