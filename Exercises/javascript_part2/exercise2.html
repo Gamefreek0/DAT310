@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function init(){
+          console.log("init ran successfully");
+          var divCol = document.getElementById('mydiv');
+          divCol.style.backgroundColor = "blue";
+          function changeColor(){
+            if (divCol.style.backgroundColor=='green') {
+              divCol.style.backgroundColor = 'blue';
+              console.log("color change to blue");
+            }else if (divCol.style.backgroundColor == 'blue') {
+              divCol.style.backgroundColor = 'red';
+              console.log("color change to red");
+            }else if (divCol.style.backgroundColor == 'red') {
+              divCol.style.backgroundColor = 'green';
+              console.log("color change to green");
+            }
+          }
+          divCol.onclick = changeColor;
+        }
+        function changeColor(){
+          if (divCol.style.backgroundColor=='green') {
+            divCol.style.backgroundColor = 'blue';
+            console.log("color change to blue");
+          }else if (divCol.style.backgroundColor == 'blue') {
+            divCol.style.backgroundColor = 'red';
+            console.log("color change to red");
+          }else if (divCol.style.backgroundColor == 'red') {
+            divCol.style.backgroundColor = 'green';
+            console.log("color change to green");
+          }
+        }
+        window.onload = init;
+        console.log("this ran first");
+    </script>
+</head>
+<body>
+<div id="mydiv"></div>
+</body>
+</html>
