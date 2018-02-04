@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist</title>
+    <link rel="stylesheet" href="exercise7.css">
+    <script>
+        function addSong(){
+          var list = document.getElementById('playlist');
+          var input = document.getElementById('songTextInput');
+          var removeBtn = "<a href='#' onclick='removeSong(this)'>Remove</a>"
+          list.innerHTML = list.innerHTML + "<li>" + input.value +" "+ removeBtn +"</li>\n";
+          input.value = "";
+        }
+
+        function removeSong(btn){
+          var liEl = btn.parentElement;
+          var ulEl = liEl.parentElement;
+          ulEl.removeChild(liEl);
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song" onclick="addSong()">
+</form>
+
+<ul id="playlist">
+</ul>
+
+</body>
+</html>
