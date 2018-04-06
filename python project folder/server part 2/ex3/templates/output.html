@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>What to pay</title>
+  </head>
+  <body>
+    Paying {{amount}} with the least number of coins/bills:
+    <br>
+    <ul>
+      {%for v,i in valuta%}
+      <li>{{i]}} x <p style="color:white; background: black;">{{v}}</p></li>
+      {%endfor%}
+    </ul>
+
+  </body>
+</html>
